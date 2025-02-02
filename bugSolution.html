@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+  <div id="nonExistent"></div>
+
+  <script>
+    //Correct method to access an element
+    let myElement = document.getElementById('myDiv');
+    if(myElement){
+        myElement.innerHTML = "This text will show";
+    }else{
+        console.error("Element with id 'myDiv' not found.");
+    }
+
+    //Handle the non-existent element gracefully
+    let nonExistentElement = document.getElementById("nonExistent");
+    if (nonExistentElement) {
+      nonExistentElement.innerHTML = "This will show if the element exists!";
+    } else {
+      console.error("Element with id 'nonExistent' not found.");
+    }
+  </script>
+</body>
+</html>
