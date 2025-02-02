@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //Attempting to access a non-existent element
+    let myElement = document.getElementByIdx('myDiv'); //Typo in method name
+    myElement.innerHTML = "This text won't show";
+
+    //Incorrect use of innerHTML with a non-existent element
+    document.getElementById("nonExistent").innerHTML = "This will cause an error!";
+  </script>
+</body>
+</html>
